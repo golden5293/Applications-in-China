@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox服务器指令大全（完整版）</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .cmd-box {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        /* 指令文字：绿色实线下划线 */
+        .cmd {
+            color: #00ff9d;
+            font-family: monospace;
+            text-decoration: underline #00ff9d;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+        }
+        /* 指令描述：无下划线（普通文字） */
+        .desc {
+            color: #cccccc;
+            margin-left: 10px;
+        }
+        /* 大标题：蓝色粗线下划线 */
+        .title-main {
+            color: #0099ff;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            text-decoration: underline #0099ff;
+            text-underline-offset: 6px;
+            text-decoration-thickness: 2px;
+            text-align: center;
+        }
+        /* 小标题：金色虚线下划线 */
+        .title-sub {
+            color: #ffd700;
+            text-decoration: dashed underline #ffd700;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
+            margin-top: 15px;
+        }
+        /* 权限等级：红色双线下划线 */
+        .level {
+            text-decoration: double underline #ff4500;
+            text-underline-offset: 2px;
+            font-weight: bold;
+            color: #ff4500;
+        }
+        /* 链接：浅蓝色细下划线，悬停变色 */
+        .link {
+            color: #00a2ff;
+            text-decoration: underline #00a2ff;
+            text-underline-offset: 4px;
+            transition: 0.3s;
+        }
+        .link:hover {
+            text-decoration-color: #ffd700;
+            color: #ffd700;
+        }
+        /* 作者信息下划线 */
+        .author {
+            color: #9999ff;
+            text-decoration: wavy underline #9999ff;
+            text-underline-offset: 2px;
+        }
+        /* 网址版本模块样式 */
+        .url-version-box {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+            border-top: 3px solid #0099ff;
+        }
+        .url-text {
+            color: #00ff9d;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        .copy-btn {
+            background-color: #0099ff;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: 0.3s;
+        }
+        .copy-btn:hover {
+            background-color: #00a2ff;
+        }
+        .version-label {
+            color: #ffd700;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title-main">Roblox服务器管理指令大全</h1>
+
+    <div class="cmd-box">
+        <h3 class="title-sub">基础管理指令</h3>
+        <p><span class="cmd">/setadmin [玩家名] [等级]</span><span class="desc">- 设置玩家管理员等级（1-5）</span></p>
+        <p><span class="cmd">/serverinfo</span><span class="desc">- 查看服务器当前人数、延迟、版本信息</span></p>
+        <p><span class="cmd">/spawn [物品ID]</span><span class="desc">- 在当前位置生成指定道具或载具</span></p>
+        <p><span class="cmd">/weather [sun/rain/snow/storm]</span><span class="desc">- 切换服务器天气效果</span></p>
+        <p><span class="cmd">/time [数值]</span><span class="desc">- 设置服务器时间（0=凌晨，12=中午，24=深夜）</span></p>
+        <p><span class="cmd">/kick [玩家名] [原因]</span><span class="desc">- 踢出指定玩家，可附带踢出理由</span></p>
+        <p><span class="cmd">/ban [玩家名] [时长] [原因]</span><span class="desc">- 封禁玩家，支持永久封禁（输入permanent）</span></p>
+        <p><span class="cmd">/unban [玩家名]</span><span class="desc">- 解除指定玩家的封禁状态</span></p>
+
+        <h3 class="title-sub">进阶功能指令</h3>
+        <p><span class="cmd">/tp [玩家名1] [玩家名2]</span><span class="desc">- 将玩家1传送到玩家2的位置</span></p>
+        <p><span class="cmd">/tphere [玩家名]</span><span class="desc">- 将指定玩家传送到自己的位置</span></p>
+        <p><span class="cmd">/godmode [玩家名]</span><span class="desc">- 给指定玩家开启无敌模式，无参数则给自己开启</span></p>
+        <p><span class="cmd">/fly [玩家名]</span><span class="desc">- 给指定玩家开启飞行模式</span></p>
+        <p><span class="cmd">/gamemode [玩家名] [模式]</span><span class="desc">- 切换玩家游戏模式（survival生存/creative创造）</span></p>
+        <p><span class="cmd">/clear [玩家名]</span><span class="desc">- 清空指定玩家的背包物品</span></p>
+        <p><span class="cmd">/announce [消息]</span><span class="desc">- 向服务器所有玩家发送系统公告</span></p>
+    </div>
+
+    <div class="cmd-box">
+        <h3 class="title-sub">管理员权限等级说明</h3>
+        <p><span class="level">等级1</span>：基础聊天权限、查看服务器信息，无管理操作权限</p>
+        <p><span class="level">等级2</span>：禁言普通玩家、修改自己的昵称，无法踢人</p>
+        <p><span class="level">等级3</span>：踢人、解除禁言、修改服务器天气和时间</p>
+        <p><span class="level">等级4</span>：封禁玩家、开启飞行模式、传送其他玩家</p>
+        <p><span class="level">等级5</span>：服务器管理全权限，可设置其他管理员、修改服务器核心参数</p>
+    </div>
+
+    <div class="cmd-box">
+        <h3 class="title-sub">玩家常见问题</h3>
+        <p>Q1：输入指令后无反应怎么办？<br>
+        A1：检查自己的管理员等级是否足够，或指令格式是否正确（勿遗漏空格和参数）</p>
+        <p>Q2：如何获取物品ID？<br>
+        A2：前往<span class="link">Roblox开发者中心</span>查询，或在游戏内输入<span class="cmd">/itemlist</span>查看当前服务器物品列表</p>
+        <p>Q3：封禁玩家后如何查看封禁记录？<br>
+        A3：输入<span class="cmd">/banlist</span>指令，可查看所有被封禁玩家的信息和时长</p>
+        
+        <h3 class="title-sub">官方资源链接</h3>
+        <p>创作者中心：<a href="https://create.roblox.com" target="_blank" class="link">Roblox Create</a></p>
+        <p>指令文档：<a href="https://developer.roblox.com/en-us/docs" target="_blank" class="link">开发者指令手册</a></p>
+        <p>服务器搭建教程：<a href="https://developer.roblox.com/en-us/articles/server-setup" target="_blank" class="link">官方搭建指南</a></p>
+    </div>
+
+    <div class="cmd-box" style="text-align: center;">
+        <p>文档版本：v2.1 | 最后更新时间：2026.7</p>
+        <p>作者：<span class="author">豆包和快手-我我我🅥</span> | 专注Roblox服务器管理与优化</p>
+    </div>
+
+    <!-- 单独放在最底部的网址版本模块 -->
+    <div class="url-version-box">
+        <p class="version-label">网址访问版本：v3.0</p>
+        <p>本地局域网访问地址：<span class="url-text" id="localUrl">http://10.22.237.18:8080/78.html</span></p>
+        <button class="copy-btn" onclick="copyUrl()">一键复制访问地址</button>
+        <p style="margin-top:8px;color:#cccccc;">二维码生成：<a href="https://cli.im/url?text=http://10.22.237.18:8080/78.html" target="_blank" class="link">点击生成二维码</a></p>
+    </div>
+
+    <!-- 一键复制功能脚本 -->
+    <script>
+        function copyUrl() {
+            const urlText = document.getElementById('localUrl').textContent;
+            navigator.clipboard.writeText(urlText).then(() => {
+                alert('访问地址已复制到剪贴板！');
+            }).catch(err => {
+                alert('复制失败：' + err);
+            });
+        }
+    </script>
+</body>
+</html>
